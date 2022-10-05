@@ -12,6 +12,9 @@ let billInput = 0
 let peopleInput = 0
 let porCientos = 0
 
+
+
+
 const comprobacion =()=>{
     if(billInput && peopleInput && porCientos ){
         reset.classList.add("reset-active")
@@ -22,7 +25,6 @@ const comprobacion =()=>{
 
 cant.textContent = ''
 const propina = (total=0,personas=0,porciento=0)=>{
-    console.log(total,personas,porciento)
     const person = Math.floor(Number(total) / Number(personas))
     const prop = person * Number(porciento)
     const totalF = prop + person
@@ -30,13 +32,24 @@ const propina = (total=0,personas=0,porciento=0)=>{
     return [prop,totalF]
 }
 const renderizar = ()=>{
+    let propinaIn =0
+    let propinaT =0
 
-    const propinaIn = propina(billInput, +peopleInput, porCientos)[0].toFixed(2)
-    const propinaT = propina(billInput, peopleInput, porCientos)[1].toFixed(2)
-    tipPerson.textContent =  propinaIn ? `$ ${propinaIn}` : 0.00
-    totalTips.textContent =  propinaT ? `$ ${propinaT}` : 0.00
+    if(billInput && peopleInput && porCientos ){
+        propinaIn = propina(billInput, +peopleInput, porCientos)[0].toFixed(2)
+        propinaT = propina(billInput, peopleInput, porCientos)[1].toFixed(2)
+        tipPerson.textContent =  propinaIn ? `$ ${propinaIn}` : 0.00
+        totalTips.textContent =  propinaT ? `$ ${propinaT}` : 0.00
+        
+    }else{
+        tipPerson.textContent =  `$ ${propinaIn}`
+        totalTips.textContent =  `$ ${propinaT}`
+      
+    }
+
 
 }
+
 bill.addEventListener('input',(e)=>{
 
     people.classList.remove("people-active")
@@ -45,26 +58,11 @@ bill.addEventListener('input',(e)=>{
     renderizar()
     comprobacion()
 
-    // if(!people.value || people.value ==''){
-    //     people.classList.add("people-active")
-    //     cant.textContent = "Can't be 0"
-    //     renderizar()
-        
-    //     //people.focus()
-        
-    // }else if(!bill.value){
-    //     bill.value = ''
-    //     renderizar()
-    //     comprobacion()
-
-    // }else{
-
-    // }  
 })
 
 people.addEventListener('input',(e)=>{
     if(!bill.value || bill.value ==''){
-        console.log('inserte bill')
+        
     }else{
 
         

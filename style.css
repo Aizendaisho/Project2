@@ -71,12 +71,17 @@ body {
   height: 13%;
   border-radius: 5px;
   border: none;
-  background-color: hsl(183deg, 39%, 42%);
+  background-color: hsl(182deg, 43%, 34%);
   font-size: 20px;
   color: hsl(183deg, 100%, 15%);
   margin: 2rem;
   margin-top: 2rem;
   font-weight: bold;
+}
+.contenedor-primario .hijo2 .reset-active {
+  background-color: hsl(145deg, 61%, 46%);
+  color: hsl(183deg, 49%, 15%);
+  cursor: pointer;
 }
 
 .boton-active {

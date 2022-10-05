@@ -84,12 +84,17 @@ body{
             height: 13%;
             border-radius: 5px;
             border: none;
-            background-color: hsl(183, 39%, 42%) ;
+            background-color: hsl(182, 43%, 34%) ;
             font-size: 20px;
             color: hsl(183, 100%, 15%);        
             margin: 2rem;
             margin-top: 2rem;
             font-weight: bold;
+        }
+        .reset-active{
+            background-color: hsl(145, 61%, 46%) ;
+            color: hsl(183, 49%, 15%);
+            cursor: pointer;
         }
 
             

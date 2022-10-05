@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(185deg, 41%, 84%);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+
+.contenedor-1 {
+  display: grid;
+  place-items: center;
+  gap: 4rem;
+}
+
+.contenedor-primario {
+  background-color: whitesmoke;
+  height: 330px;
+  width: 750px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.contenedor-primario .hijo1 {
+  width: 84%;
+  height: 85%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.contenedor-primario .hijo1 input {
+  border: none;
+  font-size: 20px;
+  color: hsl(183deg, 100%, 15%);
+}
+.contenedor-primario .hijo2 {
+  width: 84%;
+  height: 85%;
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 10px;
+}
+.contenedor-primario .hijo2 .titulo-2 {
+  color: white;
+  font-size: 14px;
+}
+.contenedor-primario .hijo2 .person {
+  color: hsl(186deg, 14%, 43%);
+  font-size: 12px;
+}
+.contenedor-primario .hijo2 .tip-person {
+  color: hsl(172deg, 67%, 45%);
+  font-size: 30px;
+}
+.contenedor-primario .hijo2 .total-person {
+  color: hsl(172deg, 67%, 45%);
+  font-size: 30px;
+}
+.contenedor-primario .hijo2 .reset-boton {
+  width: 83%;
+  height: 13%;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(183deg, 39%, 42%);
+  font-size: 20px;
+  color: hsl(183deg, 100%, 15%);
+  margin: 2rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.boton-active {
+  cursor: pointer;
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 2rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.los-tips {
+  width: 100%;
+}
+
+.grid-tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.tip-boton {
+  background-color: hsl(183deg, 100%, 15%);
+  width: 100%;
+  height: 30px;
+  color: white;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tip-boton:hover {
+  background-color: hsl(185deg, 41%, 84%);
+  color: hsl(183deg, 100%, 15%);
+  cursor: pointer;
+}
+
+.custom {
+  width: 100%;
+  height: 30px;
+  color: hsl(183deg, 100%, 15%);
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+}
+
+.custom:focus {
+  outline-color: hsl(183deg, 100%, 15%);
+  border: 3px solid hsl(183deg, 100%, 15%);
+}
+
+.input-people, .input-bill, .input-custm {
+  background-color: hsl(189deg, 41%, 97%);
+  text-align: right;
+  color: hsl(183deg, 100%, 15%);
+  width: 100%;
+}
+
+.input-people:focus, .input-bill:focus, .input-custm:focus {
+  outline-color: hsl(183deg, 100%, 15%);
+  border: 3px solid hsl(183deg, 100%, 15%);
+  cursor: pointer;
+}
+
+.input-people::-moz-placeholder, .input-bill::-moz-placeholder, .custom::-moz-placeholder {
+  color: hsl(183deg, 100%, 15%);
+}
+
+.input-people:-ms-input-placeholder, .input-bill:-ms-input-placeholder, .custom:-ms-input-placeholder {
+  color: hsl(183deg, 100%, 15%);
+}
+
+.input-people::placeholder, .input-bill::placeholder, .custom::placeholder {
+  color: hsl(183deg, 100%, 15%);
+}
+
+.contenedor-people {
+  width: 100%;
+}
+
+.caja-gente {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.bill {
+  width: 100%;
+}
+
+.cant {
+  color: rgb(224, 109, 15);
+}
+
+.contenedor-input-people, .contenedor-input-total {
+  background-color: hsl(189deg, 41%, 97%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.los-tips {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.font-color {
+  color: hsl(183deg, 100%, 15%);
+  font-weight: bold;
+}
+
+.position {
+  position: absolute;
+}
+
+.custom::-moz-placeholder {
+  font-size: 16px;
+}
+
+.custom:-ms-input-placeholder {
+  font-size: 16px;
+}
+
+.custom::placeholder {
+  font-size: 16px;
+}
+
+.input-hover:hover {
+  cursor: pointer;
+}
+
+.people-active:focus {
+  border-style: solid;
+  border-width: 1px;
+  border: 3px solid rgb(224, 109, 15);
+  outline-color: rgb(224, 109, 15);
+}
+
+.active-boton {
+  background-color: hsl(186deg, 14%, 43%);
+  color: hsl(183deg, 100%, 15%);
+}/*# sourceMappingURL=style.css.map */

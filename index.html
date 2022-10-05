@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <title>Project 2</title>
+</head>
+<body>
+    <div class="contenedor-1">
+        <img src="./logo.svg" alt="" srcset="">
+        <div class="contenedor-primario">
+            <div class="hijo1">
+                <div class="bill">
+                    <span class="font-color">Bill</span>
+                    <div class="contenedor-input-total">
+                        <img src="./icon-dollar.svg" class="position" alt="" srcset="">
+                        <!-- <span class="position">$</span> -->
+                        <input class="input-bill input-hover" placeholder="0" type="text" name="" id="">
+                    </div>       
+                </div>
+
+                <div class="los-tips">
+                    <span class="font-color">Select Tip %</span>
+                    <div class="tips grid-tips">
+                        <span class="tip-boton">5%</span>
+                        <span class="tip-boton">10%</span>
+                        <span class="tip-boton">15%</span>
+                        <span class="tip-boton">25%</span>
+                        <span class="tip-boton">50%</span>
+                        <input type="text" placeholder="Custom " class="custom input-custm input-hover" name="" id="">
+                    </div>
+                </div>
+
+                <div class="contenedor-people">
+                    <div class="caja-gente">
+                        <span class="font-color">Number of People</span><span class="cant"> Can't be 0</span>
+
+                    </div>
+                    <div class="contenedor-input-people">
+                        <img src="./icon-person.svg" class="position" alt="">
+                        <!-- <span class="position">$</span> -->
+                        <input class="input-people input-hover" placeholder="0" type="text" name="" id="">
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="hijo2">
+                <div class="tip flex">
+                    <div class="caja-cal grid">
+                        <span class="titulo-2">Tip Amount</span>
+                        <span class="person">/ person</span>
+                    </div>
+                    <span class="tip-person">$0.00</span>
+                </div>
+                <div class="total flex">
+                    <div class="caja-cal grid">                        
+                        <span class="titulo-2">Total</span>
+                        <span class="person">/ person</span>
+                    </div>
+                    <span class="total-person">$0.00</span>
+                </div>
+
+                <button class="reset-boton">RESET</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

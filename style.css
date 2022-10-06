@@ -236,4 +236,14 @@ body {
 .active-boton {
   background-color: hsl(186deg, 14%, 43%);
   color: hsl(183deg, 100%, 15%);
+}
+
+@media (max-width: 760px) {
+  .contenedor-primario {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 750px;
+    width: 330px;
+    place-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */

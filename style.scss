@@ -245,3 +245,13 @@ body{
     
 }
 
+@media (max-width: 760px){
+    .contenedor-primario{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 750px;
+        width: 330px;
+        place-items: center;
+    }
+
+}

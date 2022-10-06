@@ -223,9 +223,12 @@ body {
   cursor: pointer;
 }
 
+.people-active {
+  border-radius: 3px;
+  border: 2px solid rgb(224, 109, 15) !important;
+}
+
 .people-active:focus {
-  border-style: solid;
-  border-width: 1px;
   border: 3px solid rgb(224, 109, 15);
   outline-color: rgb(224, 109, 15);
 }

@@ -8,6 +8,7 @@ const botones = document.querySelectorAll('.tip-boton')
 const reset = document.querySelector('.reset-boton')
 
 
+
 let billInput = 0
 let peopleInput = 0
 let porCientos = 0
@@ -23,7 +24,6 @@ const comprobacion =()=>{
     }
 }
 
-cant.textContent = ''
 const propina = (total=0,personas=0,porciento=0)=>{
     const person = Math.floor(Number(total) / Number(personas))
     const prop = person * Number(porciento)
@@ -51,28 +51,32 @@ const renderizar = ()=>{
 }
 
 bill.addEventListener('input',(e)=>{
+    if(!people.value){
+        cant.textContent = "Can't be zero"
+        people.classList.add("people-active")
+        billInput = Number(e.target.value)
+        renderizar()
+        comprobacion()
 
-    people.classList.remove("people-active")
-    cant.textContent = ''
-    billInput = Number(e.target.value)
-    renderizar()
-    comprobacion()
-
-})
-
-people.addEventListener('input',(e)=>{
-    if(!bill.value || bill.value ==''){
-        
     }else{
 
         
+        cant.textContent = ''
+        billInput = Number(e.target.value)
+        renderizar()
+        comprobacion()
+    }
+
+})
+
+people.addEventListener('input',(e)=>{  
         
         peopleInput = Number(e.target.value)
         people.classList.remove("people-active")
         cant.textContent = ''
         renderizar()
         comprobacion()
-    }
+    
 })
 
 botones.forEach((boton,i,botons)=>{
